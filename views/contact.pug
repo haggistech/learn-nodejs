@@ -9,13 +9,36 @@ block content
           .column
             img(src='/images/contact/map.jpg' style='width:100%')
           .column
-            form(action='/action_page.php')
-              label(for='fname') First Name
-              input#fname(type='text' name='firstname' placeholder='Your name..')
-              label(for='lname') Last Name
-              input#lname(type='text' name='lastname' placeholder='Your last name..')
-              label(for='subject') Subject
-              textarea#subject(name='subject' placeholder='Write something..' style='height:170px')
+            form
+              label(for='name') Name:
+              input#name(type='text' name='name' placeholder='Your name..')
+              label(for='from-email') Email:
+              input#from-email(type='text' name='email' placeholder='Your Email Address..')
+              label(for='subject') Subject:
+              input#subject(type='text' name='subject' placeholder='Your Subject..')
+              label(for='text') Subject
+              textarea#text(name='text' placeholder='Write something..' style='height:170px')
               input(type='submit' value='Submit')
 
+        // already existing HTML codes above
+        script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js')
+        // Here is a script where we will be collecting data from the form
+        script.
+          $('form').on('submit', (e) => {
+          // e.preventDefault();
+          const name = $('#name').val().trim();
+          const email = $('#from-email').val().trim();
+          const subject = $('#subject').val().trim();
+          const text = $('#text').val().trim();          
+          const data = {
+          name,
+          email,
+          subject,
+          text
+          };
+          $.post('/email', data, function() {
+          console.log('Server recieved our data');
+          });
+          });
+          // document.getElementById('#form-data').reset();
         // End Page Content
