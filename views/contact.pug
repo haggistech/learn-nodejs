@@ -1,0 +1,21 @@
+extends default
+
+block content
+    div.contactcontainer
+        // Page content
+        h2 Contact Us
+        p Swing by for a cup of coffee, or leave us a message:
+        .row
+          .column
+            img(src='/images/contact/map.jpg' style='width:100%')
+          .column
+            form(action='/action_page.php')
+              label(for='fname') First Name
+              input#fname(type='text' name='firstname' placeholder='Your name..')
+              label(for='lname') Last Name
+              input#lname(type='text' name='lastname' placeholder='Your last name..')
+              label(for='subject') Subject
+              textarea#subject(name='subject' placeholder='Write something..' style='height:170px')
+              input(type='submit' value='Submit')
+
+        // End Page Content

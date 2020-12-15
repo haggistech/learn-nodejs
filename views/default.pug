@@ -1,0 +1,40 @@
+doctype html
+head
+  title
+
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+  script(src='/scripts/script.js')
+  link(rel='stylesheet', href='/css/style.css')
+  meta(name='viewport', content='width=device-width, initial-scale=1')
+script.jsbin(src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js')
+// Navbar
+.w3-top
+  .w3-bar.w3-black.w3-card
+    a.w3-bar-item.w3-button.w3-padding-large.w3-hide-medium.w3-hide-large.w3-right(href='javascript:void(0)', onclick='myFunction()', title='Toggle Navigation Menu')
+      i.fa.fa-bars
+    a.w3-bar-item.w3-button.w3-padding-large(href='/') Home
+    a.w3-bar-item.w3-button.w3-padding-large.w3-hide-small(href='/image-upload') Image Upload
+    a.w3-bar-item.w3-button.w3-padding-large.w3-hide-small(href='/about') About Us
+    a.w3-bar-item.w3-button.w3-padding-large.w3-hide-small(href='/contact') Contact
+    .w3-dropdown-hover.w3-hide-small
+      button.w3-padding-large.w3-button(title='More')
+        | Misc 
+        i.fa.fa-caret-down
+      .w3-dropdown-content.w3-bar-block.w3-card-4
+        a.w3-bar-item.w3-button(href='#') 1
+        a.w3-bar-item.w3-button(href='#') 2
+        a.w3-bar-item.w3-button(href='#') 3
+    a.w3-padding-large.w3-hover-red.w3-hide-small.w3-right(href='javascript:void(0)')
+      i.fa.fa-search
+    a.3-bar-item.w3-button.w3-padding-large.w3-right(href='#') Sign Up
+    a.3-bar-item.w3-button.w3-padding-large.w3-right(href='#') Login
+#navDemo.w3-bar-block.w3-black.w3-hide.w3-hide-large.w3-hide-medium.w3-top(style='margin-top:46px')
+  a.w3-bar-item.w3-button.w3-padding-large(href='', onclick='myFunction()') BAND
+  a.w3-bar-item.w3-button.w3-padding-large(href='', onclick='myFunction()') TOUR
+  a.w3-bar-item.w3-button.w3-padding-large(href='', onclick='myFunction()') CONTACT
+  a.w3-bar-item.w3-button.w3-padding-large(href='#', onclick='myFunction()') MERCH
+img(src='/images/banner.jpg')
+block content
+include footer
